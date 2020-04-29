@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: development
+    url: jdbc:postgresql://localhost:5432/crud-books
+  jpa:
+    properties:
+      hibernate:
+        show-sql: false
+        format-sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: update

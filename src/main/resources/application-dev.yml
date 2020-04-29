@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: admin
+    url: jdbc:postgresql://localhost:5432/api
+  jpa:
+    properties:
+      hibernate:
+        show-sql: false
+        format-sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    hibernate:
+      ddl-auto: update
+
+books:
+  jwt:
+    secret: 49562CFC3B17139EA01C480B9C86A2DDACB38FF1B2E9DB1BF66BAB7A4E3F1FB5
+    expiration: 86400000
+    header: Authorization
+    token_prefix: Bearer
